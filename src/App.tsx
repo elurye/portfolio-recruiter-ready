@@ -98,11 +98,11 @@ export default function App() {
       <section id="contact" className="contact-section">
         <p className="section-kicker">LET'S MAKE SOMETHING GOOD</p><h2>Have something<br/><em>in mind?</em></h2><p>I'd love to hear about interesting design engineering opportunities.</p>
         <p className="contact-placeholder">
-          <a href="mailto:evelinalurye@gmail.com" rel="noopener noreferrer" data-token-index="1" tabIndex="0">
+          <a href="mailto:evelinalurye@gmail.com" rel="noopener noreferrer" data-token-index="1">
             <span>evelinalurye@gmail.com</span></a> <span className="spacer-left">|</span>
-          <a href="http://linkedin.com/in/evelina-lurye-ux-engineer" rel="noopener noreferrer" data-token-index="3" tabIndex="0" className="spacer-left">
+          <a href="http://linkedin.com/in/evelina-lurye-ux-engineer" rel="noopener noreferrer" data-token-index="3" className="spacer-left">
             <span>linkedin.com/in/evelina-lurye-ux-engineer</span></a> <span className="spacer-left">|</span>
-          <a href="https://github.com/elurye" rel="noopener noreferrer" data-token-index="5" tabIndex="0" className="spacer-left">
+          <a href="https://github.com/elurye" rel="noopener noreferrer" data-token-index="5" className="spacer-left">
             <span>https://github.com/elurye</span></a>
         </p>
       </section>
