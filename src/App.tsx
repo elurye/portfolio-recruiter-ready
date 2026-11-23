@@ -70,7 +70,23 @@ const projects = [
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [route, setRoute] = useState(window.location.hash);
-  useEffect(() => { const onHashChange = () => { setRoute(window.location.hash); window.scrollTo(0, 0); }; window.addEventListener('hashchange', onHashChange); return () => window.removeEventListener('hashchange', onHashChange); }, []);
+
+useEffect(() => {
+  const onHashChange = () => {
+    const hash = window.location.hash;
+
+    setRoute(hash);
+
+    // Only reset scroll when navigating between application pages.
+    if (hash.startsWith('#/')) {
+      window.scrollTo(0, 0);
+    }
+  };
+
+  window.addEventListener('hashchange', onHashChange);
+
+  return () => window.removeEventListener('hashchange', onHashChange);
+}, []);
   if (route.startsWith('#/work/estee')) return <EsteeCaseStudy />;
   return <>
     <header className="site-header"><a className="wordmark" href="#top" aria-label="Evelina Lurye, back to top">Evelina Lurye<span>.</span></a>
