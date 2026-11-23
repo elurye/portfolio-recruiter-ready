@@ -95,7 +95,17 @@ export default function App() {
         <p className="work-note">The Estée Lauder case study is ready to explore. Other project media and case studies are in progress; card artwork is illustrative.</p>
       </section>
       <section id="about" className="about-section"><div className="about-sticker"><Sparkles size={35}/></div><div><p className="section-kicker">A LITTLE ABOUT ME</p><h2>Equal parts <em>logic</em><br/>and imagination<span className="period">.</span></h2><p>I'm a UX Engineer with a software engineering foundation and a love of thoughtful, expressive design. I care about the details people see—and the engineering that makes those details work.</p><a href="#contact" className="text-link">Say hello <ArrowRight size={20}/></a></div></section>
-      <section id="contact" className="contact-section"><p className="section-kicker">LET'S MAKE SOMETHING GOOD</p><h2>Have something<br/><em>in mind?</em></h2><p>I'd love to hear about interesting design engineering opportunities.</p><p className="contact-placeholder">Add your preferred email or LinkedIn URL here before publishing.</p></section>
+      <section id="contact" className="contact-section">
+        <p className="section-kicker">LET'S MAKE SOMETHING GOOD</p><h2>Have something<br/><em>in mind?</em></h2><p>I'd love to hear about interesting design engineering opportunities.</p>
+        <p className="contact-placeholder">
+          <a href="mailto:evelinalurye@gmail.com" rel="noopener noreferrer" data-token-index="1" tabIndex="0">
+            <span>evelinalurye@gmail.com</span></a> <span className="spacer-left">|</span>
+          <a href="http://linkedin.com/in/evelina-lurye-ux-engineer" rel="noopener noreferrer" data-token-index="3" tabIndex="0" className="spacer-left">
+            <span>linkedin.com/in/evelina-lurye-ux-engineer</span></a> <span className="spacer-left">|</span>
+          <a href="https://github.com/elurye" rel="noopener noreferrer" data-token-index="5" tabIndex="0" className="spacer-left">
+            <span>https://github.com/elurye</span></a>
+        </p>
+      </section>
     </main><footer><span>© {new Date().getFullYear()} Evelina Lurye</span><span>Designed with curiosity. Built with care. <span aria-hidden="true">✳</span></span></footer>
   </>;
 }
