@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, ArrowRight, Heart, Sparkles } from 'lucide-react';
 import EsteeCaseStudy from './EsteeCaseStudy';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 
 function Avatar() {
   const [look, setLook] = useState({ x: 0, y: 0 });
