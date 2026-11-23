@@ -89,10 +89,14 @@ export default function App() {
       </section>
       <section id="work" className="work-section" aria-labelledby="work-heading"><div className="section-topline"><div><p className="section-kicker">THE THINGS I MAKE</p><h2 id="work-heading">Selected <em>work.</em></h2></div><span className="section-aside">A little design. A little code.<br/>A lot of curiosity.</span></div>
         <div className="projects">{projects.map(project => <article className="project-card" key={project.number}>
-          <div className={`project-art ${project.theme}`} aria-hidden="true"><span className="project-art-kicker">{project.label}</span><strong>{project.icon}</strong><span className="art-ornament">✳</span></div>
-          <div className="project-details"><div className="project-heading"><div><span className="project-number">{project.number} / {project.label}</span><h3>{project.title}</h3></div><ArrowUpRight size={24} aria-hidden="true" /></div><p>{project.description}</p>{project.number === '01' && <a className="project-open" href="#/work/estee">Explore case study <ArrowUpRight size={16}/></a>}<div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>
+          {project.number === '03' ? (
+            <div className={`project-art ${project.theme}`} aria-hidden="true"><span className="project-art-kicker">{project.label}</span><strong>{project.icon}</strong><span className="art-ornament">✳</span></div>
+          ) : (
+            <a className={`project-art project-art-link ${project.theme}`} href={project.number === '01' ? '#/work/estee' : 'https://byot-journal.com/'} aria-label={project.number === '01' ? 'Explore Estée Lauder case study' : 'Visit BYOT Journal (opens in a new tab)'} {...(project.number === '02' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}><span className="project-art-kicker">{project.label}</span><strong>{project.icon}</strong><span className="art-ornament" aria-hidden="true">✳</span></a>
+          )}
+          <div className="project-details"><div className="project-heading"><div><span className="project-number">{project.number} / {project.label}</span><h3>{project.title}</h3></div>{project.number === '03' ? <ArrowUpRight size={24} aria-hidden="true" /> : <a className="project-arrow-link" href={project.number === '01' ? '#/work/estee' : 'https://byot-journal.com/'} aria-label={project.number === '01' ? 'Explore Estée Lauder case study' : 'Visit BYOT Journal (opens in a new tab)'} {...(project.number === '02' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}><ArrowUpRight size={24} aria-hidden="true" /></a>}</div><p>{project.description}</p>{project.number === '01' && <a className="project-open" href="#/work/estee">Explore case study <ArrowUpRight size={16}/></a>}{project.number === '02' && <a className="project-open" href="https://byot-journal.com/" target="_blank" rel="noopener noreferrer">Visit live site <ArrowUpRight size={16}/></a>}<div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>
         </article>)}</div>
-        <p className="work-note">The Estée Lauder case study is ready to explore. Other project media and case studies are in progress; card artwork is illustrative.</p>
+        <p className="work-note">Explore the Estée Lauder case study or visit BYOT Journal live. Additional case studies are in progress; card artwork is illustrative.</p>
       </section>
       <section id="about" className="about-section"><div className="about-sticker"><Sparkles size={35}/></div><div><p className="section-kicker">A LITTLE ABOUT ME</p><h2>Equal parts <em>logic</em><br/>and imagination<span className="period">.</span></h2><p>I'm a UX Engineer with a software engineering foundation and a love of thoughtful, expressive design. I care about the details people see—and the engineering that makes those details work.</p><a href="#contact" className="text-link">Say hello <ArrowRight size={20}/></a></div></section>
       <section id="contact" className="contact-section">
@@ -100,7 +104,7 @@ export default function App() {
         <p className="contact-placeholder">
           <a href="mailto:evelinalurye@gmail.com" rel="noopener noreferrer" data-token-index="1">
             <span>evelinalurye@gmail.com</span></a> <span className="spacer-left">|</span>
-          <a href="http://linkedin.com/in/evelina-lurye-ux-engineer" rel="noopener noreferrer" data-token-index="3" className="spacer-left">
+          <a href="https://www.linkedin.com/in/evelina-lurye-ux-engineer/" rel="noopener noreferrer" data-token-index="3" className="spacer-left">
             <span>linkedin.com/in/evelina-lurye-ux-engineer</span></a> <span className="spacer-left">|</span>
           <a href="https://github.com/elurye" rel="noopener noreferrer" data-token-index="5" className="spacer-left">
             <span>https://github.com/elurye</span></a>

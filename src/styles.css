@@ -71,3 +71,11 @@
 @media(max-width:760px){.brand-showcase{padding:1.1rem;margin:2rem 0 3rem}.brand-display{grid-template-columns:minmax(0,1fr) 135px;gap:.7rem}.brand-phone{width:135px;height:300px;padding:11px 6px 8px;border-radius:22px}.phone-viewport{height:259px;border-radius:7px}.phone-speaker{margin:-5px auto 5px}.phone-home{margin-top:5px}.browser-viewport{height:255px}.brand-detail-gallery img{height:145px}}
 @media(max-width:450px){.brand-display{grid-template-columns:1fr}.brand-phone{margin:-40px 5px 0 auto;width:145px;height:300px}.phone-viewport{height:259px}.brand-browser{max-width:100%}.browser-viewport{height:210px}}
 @media(prefers-reduced-motion:reduce){.phone-viewport img{animation:none}}
+
+/* Linked project artwork and action arrows */
+.project-art-link{cursor:pointer;transition:transform .22s ease,box-shadow .22s ease;outline-offset:5px}
+.project-art-link:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(25,20,40,.14)}
+.project-art-link:focus-visible,.project-arrow-link:focus-visible,.project-open:focus-visible{outline:3px solid #e72d9d;outline-offset:5px;border-radius:6px}
+.project-arrow-link{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s,color .2s}
+.project-arrow-link:hover{transform:translate(3px,-3px);color:#e72d9d}
+@media(prefers-reduced-motion:reduce){.project-art-link,.project-arrow-link{transition:none}.project-art-link:hover,.project-arrow-link:hover{transform:none}}
